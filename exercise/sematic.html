@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Page</h1></header>
+    <nav>
+    <ul>
+        <li><a>Home</a></li>
+        <li><a>About us</a></li>
+        <li><a>Main</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+</nav>
+<main>
+    <article>
+        <h2>HTML layout elements</h2>
+        <p>
+            It's good to understand the overall meaning of all the HTML sectioning elements in detail <br /> 
+            this is something you'll work on gradually as you start to get more experience with web development.<br /> 
+            You can find a lot of detail by reading our HTML element reference.
+        </p>
+
+        <section>
+            <h3>In more detail</h3>
+            <p>
+                main is for content unique to this page. Use main only once per page, and put it directly inside body. Ideally this shouldn't be nested within other elements.<br />
+                    <hr>
+                    article encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).<br>
+                        <hr>
+                    section is similar to article, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries), or a theme. It's considered best practice to begin each section with a heading; also note that you can break articles up into different sections, or sections up into different articles, depending on the context.<br>
+                        <hr>
+                    aside contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).<br>
+                        <hr>
+                    header represents a group of introductory content. If it is a child of body it defines the global header of a webpage, but if it's a child of an article or section it defines a specific header for that section (try not to confuse this with titles and headings).<br>
+                        <hr>
+                    nav contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.<br>
+                        <hr>
+                    footer represents a group of end content for a page.
+            </p>
+        </section>
+    </article>
+    <aside>
+        <h2></h2>
+        <p>
+            For cases like these, HTML provides the <div> and <span> elements.<br>
+                 You should use these preferably with a suitable class attribute,<br>
+                  to provide some kind of label for them so they can be easily targeted.
+        </p>
+    </aside>
+</main>
+<footer>
+    <p>©Copyright 2050 by nobody. All rights reversed.</p>
+</footer>
+</body>
+</html>

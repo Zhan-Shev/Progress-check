@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2 {
+            color: blueviolet;
+        }
+        dl {
+  color: gray;
+  margin: 0.5em 0;
+}
+
+dt {
+  font-weight: bold;
+  color: purple;
+}
+
+ul {
+  border: 2px solid orange;
+}
+
+ol {
+  border: 2px solid purple;
+}
+
+ol, ul {
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+
+h1, strong {
+  color: purple;
+}
+
+em {
+  color: gray;
+}
+
+/* p {
+  mix-blend-mode: difference;
+  color: white;
+} */
+
+.example::after {
+    content: "^## "; /* Добавляет стрелку перед текстом */
+    color: red;
+  }
+    </style>
+</head>
+<body>
+    <h1>Advanced HTML Animals</h1>
+    <h2>Llama</h2>
+    <p>Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.</p>
+    <h2>Anaconda</h2>
+    <p>A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.</p>
+    <h2>Hippopotamus</h2>
+    <p>His description is bottomless.</p>
+
+  <dl><dt><h1>Advanced HTML Animals</h1></dt>
+
+    <dd>Llama
+        Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.
+        Anaconda
+        A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.
+        Hippopotamus
+        His description is bottomless.</dd></dl>
+    
+        
+        <h1>Looking at lists</h1>
+
+<p>Turn the following list of my favorite vegetables into an unordered list.</p>
+
+<ul>
+  <li>Cucumber</li>
+  <li>Broccoli</li>
+  <li>Asparagus</li>
+  <li>Pepper</li>
+</ul>
+
+<ol>
+  <li>Cucumber</li>
+  <li>Broccoli</li>
+  <li>Asparagus</li>
+  <li>Pepper</li>
+</ol>
+
+<p>Turn the following directions into an ordered list.</p>
+
+  First knock on the door
+  When prompted, say the magic word
+  Wait for at least 5 seconds
+  Turn the handle and push
+
+  <h1>Emphasis and importance</h1>
+  <p>There are two things I care about — <em>music and friends</em>. Someday I might be able to get my friends interested in each other, and my music!</p>
+
+  <p class="example">This is some text.</p>
+  
+    
+</body>
+</html>

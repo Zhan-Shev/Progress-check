@@ -1,0 +1,88 @@
+.something {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: example;
+    animation-duration: 5s;
+    position: relative;
+    animation-delay: 2s; 
+
+    animation-iteration-count: infinite;
+
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes example {
+    0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green; left:200px; top:200px;}
+}
+
+.shine {
+    width: 250px;
+    height: 100px;
+    background:repeating-linear-gradient(#e7acef, #a457f1, #e65ff8, #45047e);
+    border-radius: 15px;
+    border-color: azure;
+    border-top-width: 3px;
+    border-left-width: 2px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.7s ease;
+}
+
+.container {
+    border: 5px solid rgb(89, 3, 115);
+    padding: 15px;
+    perspective: 700px;
+}
+.shine:hover {
+   transform: rotateX(45deg);
+}
+.shadow {
+    box-shadow: -2px -4px 6px rgb(255, 255, 255);
+}
+
+.coolanimation {
+    letter-spacing: 10px; 
+    font-size: 30px;
+    font-weight: bold;   
+    height: 64px;
+    margin: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+/* background: rgba(255, 255, 255, 0.2); Белый с 20% прозрачности */
+/* background: rgba(255, 255, 255, 0.5); */
+
+.coolanimation::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 28px;
+    height: 33px;
+    width: 33px;
+    border-radius: 35px;
+    z-index: -1;
+    background: #e7acef;
+    transition: all 0.5s ease;
+}
+.coolanimation:hover::before {
+    width: 153px;
+}
+
+.coolanimation:active::before {
+    width: 193px;
+}
+.coolanimation:active {
+    letter-spacing: 20px;
+    transition: all 0.5s ease;
+}
+
+
+    

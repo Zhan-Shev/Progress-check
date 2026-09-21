@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .title::before {
+  content: "★ ";
+  color: gold;
+  font-size: 20px;
+}
+.line::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  margin-top: 10px;
+}
+.line:hover::after {
+    animation-name: line;
+    animation-duration: 0.3s;
+    animation-timing-function:linear;
+
+}
+@keyframes line {
+    0% {width: 0%;}
+    50% {width: 4%;}
+    100% {width: 8%;}
+}
+
+.btn::after {
+  content: attr(title); /* Добавляет текст из атрибута title */
+  font-size: 12px;
+  color: gray;
+  display: block;
+  margin-top: 5px;
+}
+
+.image::before {
+  content: url('/images-video-audio/15f296b58ec52b4dec17f3bc016a8451.mp4'); /* Вставляет изображение */
+}
+
+.icon::before {
+  content: url('/images-video-audio/5IPd.gif');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.icon:hover::before {
+  content: url('/images-video-audio/go fast sonic the hedgehog Sticker by Leroy Patterson.gif');
+  transform: scale(1.2) rotate(15deg);
+  opacity: 0.8;
+}
+
+    </style>
+</head>
+<body>
+     <p class="image">some text</p>
+    <h1 class="title">Hello World</h1>
+    <!-- unicode -->
+
+    <p class="line">This is some text.</p>
+    <!-- /* Добавляет текст из атрибута title */ -->
+    <button class="btn" title="Click me">Button</button>
+
+    <div class="icon"></div>
+</body>
+</html>

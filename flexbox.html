@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxx {
+            min-height: 800px;
+            display: flex;
+            border: 8px solid black;
+            gap: 5px;
+            /* column-gap: 5px;
+            row-gap: 5px;
+            flex-wrap: wrap; */
+            /* wrap, nowrap */
+            /* flex-direction: row; */
+            /* row, row-reverse, column,
+            justify-content: center; 
+            /* space-between, space-around, space-evenly */
+            /* flex-start, flex-end, cender */
+            /* align-items: center;
+            justify-content: center; 
+            align-content: center; */
+        }
+        #box1 {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+        #box2 {
+            flex-grow: 5;
+        }
+        .box {
+            flex-shrink: 1;
+            min-width: 70px;
+            flex-grow: 1;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(110, 110, 224);
+            color: aliceblue;
+            justify-content: center; 
+            align-items: center;
+            display: flex;
+        }
+        @media(max-width:100px) {
+            .boxx {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="boxx">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</body>
+</html>

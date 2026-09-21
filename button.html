@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a description of the page.">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.pill {
+            font-size: 12px; 
+            /* размер шрифта                        */
+            font-family: 'Readex Pro', sans-serif;
+            /* название шрифтов */
+            padding: 0.5em 1em;
+            /* хуйня что дистанция от текста */
+            border-radius: 1em;
+            border: none;
+            outline: none;
+           background: linear-gradient(to right, #ff7e5f, #feb47b);
+            cursor: pointer;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+
+            transition: all 0.3s ease;  /* Плавный переход */
+        }
+        .pill:not(.pill2):hover {
+            background: #cccc;
+            box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.5);
+            transform: translateY(-2px); /* Кнопка поднимается */
+        }
+        /* при наведении меняет цвет */
+        .pill2 {
+            background: green;
+            color: #dddddd;
+        }
+        .kurwa {
+            text-shadow: 2px 3px 6px rgba(0,0,0,0.5);
+            text-decoration-line: line-through;
+            text-align: center;
+            color: #8e0000;
+            background: #feb47b;
+            padding: 20px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            /* дистанция между буквами */
+            box-shadow: -2px 4px 3px rgba(0,0,0,0.3);
+            border-top-right-radius: 15px;
+            border-color: #ff7e5f;
+            border-width: 4px;
+            position: relative;
+            overflow: hidden; /* Скрываем всё, что выходит за границы кнопки */
+           cursor:not-allowed;
+        }
+        .mouw2 {
+            position: absolute; /* Абсолютное позиционирование внутри кнопки */
+    top: 0;
+    left: 0;
+    width: 100%; /* Растягиваем изображение на всю кнопку */
+    height: 100%;
+    z-index: 1; /* Устанавливаем слой ниже текста */
+    object-fit: cover; /* Изображение подстраивается под размер кнопки */
+    opacity: 0.5; /* Полупрозрачное изображение */
+        }
+    .mouw {
+        position: relative; /* Для сохранения слоя поверх изображения */
+    z-index: 2; /* Текст всегда выше всех других объектов */
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    text-align: center; /* Выравнивание текста */
+    pointer-events: none; /* Текст игнорирует клики, чтобы они попадали на кнопку */
+    }
+
+    .pizda2 {
+        font-size: 15px;
+        font-weight: bold;
+        pointer-events: none;
+        color: azure;
+        position: relative;
+        z-index: 2;
+    }
+    .pizda3 {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .pizda {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        padding: 20px;
+        border-radius: 15px;
+        outline: none;
+        background: #8e0000;
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+.btn {
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 1, 24);
+    left: 0;
+    top: 0; 
+    border-radius: 12px;
+
+}
+.btn::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 500%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(6px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+.btn:active::after {
+    background: transparent;
+}
+.btn:active {
+    color: black;
+    font-weight: bold;
+}
+
+.pul {
+    font-size: 15px; 
+    padding: 30px 22px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #aef496;
+    color: #1e5305;
+    border: none;
+    cursor: pointer;
+    animation-name: pulsation;
+}
+.pul:hover {
+    animation: pulsation 1s infinite alternate;
+    
+}
+
+@keyframes pulsation {
+    0% {
+            transform: scale(1);
+        }
+    100% {
+            transform: scale(2);
+        }
+}
+
+.sonic {
+    position: relative;
+    width: 250px;
+    height: 80px;
+    background: linear-gradient(to bottom, #03156f, #0057e2, #dddddd);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: crosshair;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: opacity 0.3s;
+    
+}
+.sonic:hover {
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #a2eeff, 0 0 30px #2deeff;
+    background: linear-gradient(to bottom, #0529db, #516bff, #dddddd);
+}
+.sonic:hover img {
+    content: url('/images-video-audio/go fast sonic the hedgehog Sticker by Leroy Patterson.gif');
+}
+.sonic img {
+    transition: opacity 1s;
+}
+
+.game {
+    position: absolute;
+    left: 13px;
+    top: 22px;
+    font-family: Arial;
+    color: #dddddd;
+    font-size: 13px;
+    
+}
+.sonic:hover .game {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.07);
+        }
+    }
+
+.sonicgif {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+    
+
+
+ 
+    </style>
+</head>
+<body style="background-color: rgb(162, 147, 181);">
+    <button class="pill" type="button">Buttom</button>
+    <button class="pill pill2" type="button">Button</button>
+    <button class="kurwa" type="button">
+        <img class="mouw2" width="50px" src="/images-video-audio/SVG/bookmark-svgrepo-com.svg">
+        <span class="mouw">button</span>
+    </button>
+    <button class="pizda">
+        <span class="pizda2">Dazai Osamu</span>
+        <img class="pizda3" width="100px" src="https://i.pinimg.com/736x/21/d3/66/21d36606208ce7d4da95792d23506a05.jpg">
+    </button>
+    <button class="btn">The Fashion</button>
+    <button class="pul">Pulse</button>
+    <a href="buttonsonic.html">
+    <button class="sonic" type="button">
+        <span class="game"><p><b>Click here to get the game</b></p></span>
+      <img class="sonicgif" src="/images-video-audio/5IPd.gif" style="height: 60px;">
+    </button>
+    </a>
+    <button class="something">Sigma Boy</button>
+    <div class="container">
+    <button class="shine" class="shadow">Something</button>
+    </div>
+    <button class="coolanimation">START</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- an <a> element and using the href attribute -->
+        <p>
+            I'm creating a link to
+            <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+          </p>
+          <!-- even block-level elements -->
+          <a href="https://developer.mozilla.org/en-US/">
+            <h1>MDN Web Docs</h1>
+          </a>
+          <!-- even an image -->
+          <a href="https://developer.mozilla.org/en-US/">
+            <img src="https://i.pinimg.com/736x/f1/94/6d/f1946d3b57309eae4ebc831dfa2ab5ce.jpg" alt="MDN Web Docs" />
+          </a>
+          <!-- The title contains additional information about the link -->
+          <p>
+            I'm creating a link to
+            <a
+              href="https://www.mozilla.org/en-US/"
+              title="The best place to find more information about Mozilla's
+                    mission and how to contribute">
+              the Mozilla homepage</a>.
+
+              <!-- to assign an id attribute to the element you want to link to -->
+              <h2 id="Mailing_address">Mailing address</h2>
+              <p>
+                The <a href="#Mailing_address">company mailing address</a> can be found at the
+                bottom of this page.
+              </p>
+
+              <!-- you can use the download attribute to provide a default save filename -->
+              <a
+              href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+              download="firefox-latest-64bit-installer.exe">
+              Download Latest Firefox for Windows (64-bit) (English, US)
+            </a>
+          </p>
+          <!-- a mailto: link indicates the email address of the intended recipient -->
+          <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+          
+</body>
+</html>

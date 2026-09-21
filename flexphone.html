@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+        }
+        header {
+            display: flex;
+            padding: min(50px, 2%);
+            height: 30px;
+            width: 100%;
+            border: 8px solid black;
+        }
+        nav {
+            display: flex;
+            padding: min(50px, 2%);
+            height: 10px;
+            width: 100%;
+            border: 8px solid black;
+            margin-top: 2px;
+        }
+        main {
+            display: flex;
+            padding: min(50px, 2%);
+            height: 300px;
+            width: 100%;
+            border: 8px solid black;
+            margin-top: 2px;
+        }
+        aside {
+            display: flex;
+            padding: min(50px, 2%);
+            height: 100px;
+            width: 100%;
+            border: 8px solid black;
+            margin-top: 2px;
+        }
+        .column {
+            display: flex;
+  flex-direction: column; 
+  gap: 10px;
+        }
+        .parent {
+  display: flex; 
+}
+.row-item {
+  align-self: center; 
+}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="column">
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+         </div>
+    <main class="row-item">
+
+    </main class="row-item">
+    <aside class="row-item">
+
+    </aside class="row-item">
+  </div>
+</body>
+</html>
